@@ -1,18 +1,15 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Language } from '../../types/Language.model';
+import { Component, OnInit, Input } from "@angular/core";
+import { ILanguage } from "../../modules/dashboard/types/dashboard-state/dashboard-state.interface";
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: "app-footer",
+  templateUrl: "./footer.component.html",
+  styleUrls: ["./footer.component.scss"]
 })
 export class HeaderComponent implements OnInit {
+  @Input() language: ILanguage;
 
-  @Input() languages: Language[];
-  @Input() langCode: string;
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
