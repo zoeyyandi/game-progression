@@ -1,9 +1,9 @@
 export interface IDashboardState {
-  language: ILanguage;
+  languages: Array<ILanguage> | Error;
   timeRemaining: string;
   numberOfUnfinishedGames: number;
   numberOfFinishedGames: number;
-  profile: IProfile;
+  profile: IProfile | Error;
 }
 
 export interface IProfile {
@@ -14,9 +14,12 @@ export interface IProfile {
   languageId: number;
   averageNumberOfHoursPerDay: number;
 }
-
 export interface ILanguage {
   id: number;
   name: string;
   code: string;
 }
+
+export const isLanguagesError = (
+  languages: Array<ILanguage> | Error
+): languages is Error => (<Error>languages).message !== undefined;

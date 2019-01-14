@@ -1,24 +1,24 @@
-import { NgModule } from "@angular/core";
-import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: "dashboard",
-    loadChildren: "./modules/dashboard/dashboard.module#DashboardModule"
+    path: 'dashboard',
+    loadChildren: './modules/dashboard/dashboard.module#DashboardModule'
   },
   {
-    path: "games",
-    loadChildren: "./modules/games/games.module#GamesModule"
+    path: 'games',
+    loadChildren: './modules/games/games.module#GamesModule'
   },
   {
-    path: "",
-    redirectTo: "dashboard",
-    pathMatch: "full"
+    path: '',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   },
   {
-    path: "**",
-    redirectTo: "dashboard",
-    pathMatch: "full"
+    path: '**',
+    redirectTo: 'dashboard',
+    pathMatch: 'full'
   }
 ];
 

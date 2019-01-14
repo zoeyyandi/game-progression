@@ -1,15 +1,15 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { Observable } from "rxjs";
-import { IProfile } from "../modules/dashboard/types/dashboard-state/dashboard-state.interface";
-import { ILanguage } from "../modules/dashboard/types/dashboard-state/dashboard-state.interface";
-import { IGame } from "../modules/games/types/games-state/games-state.interface";
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { IProfile } from '../modules/dashboard/types/dashboard-state/dashboard-state.interface';
+import { ILanguage } from '../modules/dashboard/types/dashboard-state/dashboard-state.interface';
+import { IGame } from '../modules/games/types/games-state/games-state.interface';
 
 @Injectable({
-  providedIn: "root"
+  providedIn: 'root'
 })
 export class AppService {
-  base_url: "http://localhost:4200";
+  base_url: 'http://localhost:4200';
 
   constructor(private http: HttpClient) {}
 

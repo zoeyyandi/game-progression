@@ -1,8 +1,8 @@
-import { Injectable } from "@angular/core";
-import { select, Store } from "@ngrx/store";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
-import { IAppState } from "../types/app-state/app-state.interface";
+import { IAppState } from '../types/app-state/app-state.interface';
 
 @Injectable()
 export class AppStore {
