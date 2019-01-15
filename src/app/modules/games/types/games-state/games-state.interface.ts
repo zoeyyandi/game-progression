@@ -1,13 +1,7 @@
-export interface IGamesState extends Array<IGame> {}
+import { IPlatforms } from './../../modules/platforms/types/platforms-state.interface';
+import { IListings } from '../../modules/listings/types/listings-state.interface';
 
-export interface IGame {
-  id: number;
-  dateCreated: string;
-  name: string;
-  image: string;
-  platformId: number;
-  priority: number;
-  numberOfHoursPlayed: number;
-  numberOfHoursToComplete: number;
-  isComplete: boolean;
+export interface IGamesState {
+  listings: IListings;
+  platforms: IPlatforms;
 }
