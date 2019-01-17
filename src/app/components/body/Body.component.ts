@@ -7,7 +7,7 @@ import { IDashboardState } from '../../modules/dashboard/types/dashboard-state/d
   templateUrl: './body.component.html',
   styleUrls: ['./body.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class BodyComponent implements OnInit {
   @Input() Games: IGamesState;
   @Input() Dashboard: IDashboardState;
 

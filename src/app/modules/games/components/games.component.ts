@@ -17,6 +17,7 @@ export class GamesComponent implements OnInit {
   listings$: Observable<IListings>;
   platforms$: Observable<IPlatforms>;
   constructor(private store: Store<IGamesState>) {}
+
   ngOnInit() {
     this.store.dispatch(new GetListings());
     this.store.dispatch(new GetPlatforms());

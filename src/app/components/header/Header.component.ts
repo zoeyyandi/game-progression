@@ -10,7 +10,9 @@ export class HeaderComponent implements OnInit {
   @Input() title: string;
   @Input() profile: IProfile;
 
-  constructor() {}
+  constructor() {
+    console.log('hihihi', this.profile);
+  }
 
   ngOnInit() {}
 }

@@ -6,7 +6,7 @@ import { ILanguage } from '../../modules/dashboard/types/dashboard-state/dashboa
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class FooterComponent implements OnInit {
   @Input() language: ILanguage;
 
   constructor() {}
