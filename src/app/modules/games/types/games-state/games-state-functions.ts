@@ -4,8 +4,9 @@ import { createPlatformsState } from '../../modules/platforms/types/platforms-st
 import { IGamesState } from './games-state.interface';
 
 export function createGamestate(): IGamesState {
-  return {
+  const gamesState = {
     listings: createListingsState(),
     platforms: createPlatformsState()
   };
+  return gamesState;
 }

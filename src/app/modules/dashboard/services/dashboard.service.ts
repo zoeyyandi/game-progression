@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { IProfile } from '../types/dashboard-state/dashboard-state.interface';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { ILanguage } from './../types/dashboard-state/dashboard-state.interface';
 
 @Injectable()

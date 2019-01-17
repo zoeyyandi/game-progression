@@ -11,11 +11,11 @@ export const reducers: ActionReducerMap<IAppState> = {
   gamesState: gamesReducer
 };
 
-export const logger = (reducer: ActionReducer<IAppState>): any => {
+export function logger(reducer: ActionReducer<IAppState>): any {
   return storeLogger({
     collapsed: true
   })(reducer);
-};
+}
 
 export const metaReducers: Array<
   MetaReducer<IAppState>

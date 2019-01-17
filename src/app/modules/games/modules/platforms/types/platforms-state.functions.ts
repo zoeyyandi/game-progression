@@ -1,5 +1,5 @@
 import { IPlatforms } from './platforms-state.interface';
 
 export function createPlatformsState(): IPlatforms {
-  return [];
+  return [{ id: 0, name: '' }];
 }

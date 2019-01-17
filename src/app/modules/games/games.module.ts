@@ -7,9 +7,10 @@ import { GamesRoutingModule } from './games-routing.module';
 import { GamesStore } from './store/games.store';
 
 @NgModule({
-  imports: [CommonModule, RouterModule, GamesRoutingModule],
   declarations: [GamesComponent],
+  imports: [CommonModule, RouterModule, GamesRoutingModule],
   exports: [],
-  providers: [GamesStore]
+  providers: [GamesStore],
+  bootstrap: [GamesComponent]
 })
 export class GamesModule {}
