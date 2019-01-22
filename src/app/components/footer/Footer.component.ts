@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ILanguage } from '../../modules/dashboard/types/dashboard-state/dashboard-state.interface';
+import { ILanguage } from 'src/app/types/app-state/app-state.interface';
 
 @Component({
   selector: 'app-footer',

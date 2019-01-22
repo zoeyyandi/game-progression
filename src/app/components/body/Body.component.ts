@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { IGamesState } from '../../modules/games/types/games-state/games-state.interface';
-import { IDashboardState } from '../../modules/dashboard/types/dashboard-state/dashboard-state.interface';
 
 @Component({
   selector: 'app-body',
@@ -9,7 +8,7 @@ import { IDashboardState } from '../../modules/dashboard/types/dashboard-state/d
 })
 export class BodyComponent implements OnInit {
   @Input() Games: IGamesState;
-  @Input() Dashboard: IDashboardState;
+  // @Input() Dashboard: IDashboardState;
 
   constructor() {}
 

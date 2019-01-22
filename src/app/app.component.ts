@@ -1,8 +1,7 @@
-import { select, Store } from '@ngrx/store';
+import { GetProfile, GetLanguage } from './store/app.actions';
+import { Store } from '@ngrx/store';
 import { AppStore } from './store/app.store';
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
-import { IProfile } from './modules/dashboard/types/dashboard-state/dashboard-state.interface';
 
 @Component({
   selector: 'app-root',
@@ -11,12 +10,9 @@ import { IProfile } from './modules/dashboard/types/dashboard-state/dashboard-st
 })
 export class AppComponent implements OnInit {
   title = 'Game Progression';
-  profile$: Observable<IProfile>;
-
-  constructor(private store: Store<AppStore>) {
-    this.profile$ = this.store.pipe(select('profile'));
-  }
+  constructor(private store: Store<AppStore>) {}
   ngOnInit() {
-    console.log('im here', this.profile$);
+    this.store.dispatch(new GetProfile());
+    this.store.dispatch(new GetLanguage());
   }
 }

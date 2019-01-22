@@ -11,7 +11,7 @@ import { IGamesState } from '../types/games-state/games-state.interface';
 export class GamesStore {
   constructor(private appStore: AppStore, private store: Store<IAppState>) {}
 
-  public getGamesState(): Observable<IGamesState> {
-    return this.appStore.getAppState().pipe(map(state => state.gamesState));
-  }
+  // public getGamesState(): Observable<IGamesState> {
+  //   return this.appStore.getAppState().pipe(map(state => state.gamesState));
+  // }
 }
