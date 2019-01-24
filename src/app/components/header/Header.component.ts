@@ -1,3 +1,4 @@
+import { IProfile } from './../../types/app-state/app-state.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() title: string;
-  // @Input() profile: IProfile;
+  @Input() profile: IProfile;
 
   constructor() {}
 }

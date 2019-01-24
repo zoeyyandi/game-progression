@@ -1,1 +1,3 @@
-<p>Language</p>
+<ul *ngFor="let lang of language">
+  <li *ngFor="let object of lang">{{ object.name }}</li>
+</ul>

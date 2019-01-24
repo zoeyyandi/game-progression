@@ -6,10 +6,6 @@ import { ILanguage } from 'src/app/types/app-state/app-state.interface';
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
   @Input() language: ILanguage;
-
-  constructor() {}
-
-  ngOnInit() {}
 }
