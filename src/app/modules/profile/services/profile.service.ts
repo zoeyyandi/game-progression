@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IListings } from './../types/listings-state.interface';
+import { IProfile } from '../../../types/app-state/app-state.interface';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ListingsService {
+export class ProfileService {
   private baseUrl = 'http://localhost:3000/';
   constructor(private http: HttpClient) {}
 
-  getListings() {
-    return this.http.get<IListings>(this.baseUrl + 'games');
+  updateProfile() {
+    return this.http.put<IProfile>(this.baseUrl + 'profile', {});
   }
 }

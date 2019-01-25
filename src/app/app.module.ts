@@ -1,3 +1,4 @@
+import { DashboardEffects } from './modules/dashboard/store/dashboard.effects';
 import { AppService } from './services/app.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppEffects } from './store/app.effects';

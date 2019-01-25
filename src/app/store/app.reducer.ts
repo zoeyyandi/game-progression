@@ -1,9 +1,8 @@
 import { ILanguage, IProfile } from './../types/app-state/app-state.interface';
 import { ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { storeLogger } from 'ngrx-store-logger';
-
 import { environment } from '../../environments/environment';
-import { gamesReducer } from '../modules/games/store/games.reducer';
+import { dashboardReducer } from '../modules/dashboard/store/dashboard.reducer';
 import { IAppState } from '../types/app-state/app-state.interface';
 import {
   ProfileActionsUnion,
@@ -57,9 +56,9 @@ export function languageReducer(
 
 export const reducers: ActionReducerMap<IAppState> = {
   profileState: profileReducer,
-  // gamesState: gamesReducer,
-  // dashboardState: dashboardReducer,
+  dashboardState: dashboardReducer,
   languageState: languageReducer
+  // gamesState: gamesReducer,
 };
 
 export function logger(reducer: ActionReducer<IAppState>): any {

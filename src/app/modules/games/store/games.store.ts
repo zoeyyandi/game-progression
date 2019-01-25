@@ -5,8 +5,6 @@ import { map } from 'rxjs/operators';
 
 import { IAppState } from '../../../types/app-state/app-state.interface';
 import { AppStore } from '../../../store/app.store';
-import { IGamesState } from '../types/games-state/games-state.interface';
-
 @Injectable()
 export class GamesStore {
   constructor(private appStore: AppStore, private store: Store<IAppState>) {}
