@@ -1,6 +1,6 @@
 import { GetGamesSummary } from './../store/dashboard.actions';
 import { DashboardStore } from './../store/dashboard.store';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { IAppState } from 'src/app/types/app-state/app-state.interface';
@@ -10,12 +10,11 @@ import { IAppState } from 'src/app/types/app-state/app-state.interface';
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent {
   constructor(
     private store: Store<IAppState>,
     public dashboardStore: DashboardStore
-  ) {}
-  ngOnInit() {
+  ) {
     this.store.dispatch(new GetGamesSummary());
   }
 }

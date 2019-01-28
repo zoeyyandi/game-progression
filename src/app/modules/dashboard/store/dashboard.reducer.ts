@@ -19,7 +19,6 @@ export function dashboardReducer(
     case DashboardActionTypes.GetGamesSummary:
       return { ...state };
     case DashboardActionTypes.GetGamesSummarySuccess:
-      console.log('hihihi', action.payload);
       return { ...action.payload };
     case DashboardActionTypes.GetGamesSummaryFailure:
       return { ...state };

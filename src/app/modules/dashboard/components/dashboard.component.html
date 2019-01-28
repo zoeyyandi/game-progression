@@ -1,4 +1,2 @@
 <p>Dashboard</p>
-<!-- <dashboard-details
-  [state]="dashboardStore.getDashboardState() | async"
-></dashboard-details> -->
+<p>{{ dashboardStore.getDashboardState() | async | json }}</p>

@@ -10,7 +10,6 @@ import {
 import { switchMap, map, catchError } from 'rxjs/operators';
 import { DashboardService } from '../services/dashboard.service';
 import { IDashboardState } from './../types/dashboard-state/dashboard-state.interface';
-import { IGame } from '../types/dashboard-state/dashboard-state.interface';
 
 @Injectable({ providedIn: 'root' })
 export class DashboardEffects {
@@ -26,35 +25,11 @@ export class DashboardEffects {
         .getGames()
         .pipe(
           map(
-            (games: IGame[]) =>
-              new GetGamesSummarySuccess(transformGames(games))
+            (gamesSummary: IDashboardState) =>
+              new GetGamesSummarySuccess(gamesSummary)
           )
         )
     ),
     catchError(error => observableOf(new GetGamesSummaryFailure(error)))
   );
 }
-
-const transformGames = gamesArray => {
-  return gamesArray.reduce(
-    (acc, curr) => {
-      if (!curr.isComplete) {
-        return {
-          ...acc,
-          timeRemaining: acc.timeRemaining + curr.numberOfHoursToComplete,
-          numberOfUnfinishedGames: acc.numberOfUnfinishedGames += 1
-        };
-      } else {
-        return {
-          ...acc,
-          numberOfFinishedGames: acc.numberOfFinishedGames += 1
-        };
-      }
-    },
-    {
-      timeRemaining: 0,
-      numberOfFinishedGames: 0,
-      numberOfUnfinishedGames: 0
-    }
-  );
-};
