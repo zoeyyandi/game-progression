@@ -1,6 +1,6 @@
 <app-header
   title="Game Progression"
-  [profile]="appStore.getprofileState() | async"
+  [profile]="profileStore.getProfileState() | async"
 ></app-header>
 <app-body> <router-outlet></router-outlet> </app-body>
 <app-footer [language]="appStore.getLanguageState() | async"></app-footer>

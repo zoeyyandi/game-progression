@@ -9,11 +9,6 @@ import { Observable } from 'rxjs';
 export class DashboardStore {
   constructor(private store: Store<IAppState>) {}
   public getDashboardState(): Observable<IDashboardState> {
-    return this.store.pipe(
-      select(state => {
-        console.log('im here', state.dashboardState);
-        return state.dashboardState;
-      })
-    );
+    return this.store.pipe(select(state => state.dashboardState));
   }
 }

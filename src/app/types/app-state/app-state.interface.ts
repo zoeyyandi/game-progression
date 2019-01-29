@@ -1,3 +1,5 @@
+import { ILanguage } from './../../modules/language/types/language-state.interface';
+import { IProfile } from './../../modules/profile/types/profile-state.interface';
 import { IDashboardState } from './../../modules/dashboard/types/dashboard-state/dashboard-state.interface';
 
 export interface IAppState {
@@ -5,20 +7,4 @@ export interface IAppState {
   // gamesState: IGamesState;
   profileState: IProfile;
   languageState: Array<ILanguage | Error>;
-}
-
-export interface IProfile {
-  id: number;
-  firstName: string;
-  lastName: string;
-  image: string;
-  languageId: number;
-  averageNumberOfHoursPerDay: number;
-  error?: Error;
-}
-
-export interface ILanguage {
-  id: number;
-  name: string;
-  code: string;
 }

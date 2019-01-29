@@ -1,5 +1,5 @@
+import { IProfile } from './../../profile/types/profile-state.interface';
 import { Action } from '@ngrx/store';
-import { IProfile } from '../../../types/app-state/app-state.interface';
 
 export enum ProfileActionTypes {
   UpdateProfile = '[Profile] Update Profile',

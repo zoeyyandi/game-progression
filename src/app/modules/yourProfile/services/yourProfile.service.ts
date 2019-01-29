@@ -1,6 +1,6 @@
+import { IProfile } from './../../profile/types/profile-state.interface';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { IProfile } from '../../../types/app-state/app-state.interface';
 
 @Injectable({
   providedIn: 'root'

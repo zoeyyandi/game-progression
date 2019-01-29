@@ -1,4 +1,4 @@
-import { IProfile } from './../../types/app-state/app-state.interface';
+import { IProfile } from './../../modules/profile/types/profile-state.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

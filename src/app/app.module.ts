@@ -1,3 +1,7 @@
+import { LanguageEffects } from './modules/language/store/language.effects';
+import { ProfileEffects } from './modules/profile/store/profile.effects';
+import { LanguageStore } from './modules/language/store/language.store';
+import { ProfileStore } from './modules/profile/store/profile.store';
 import { DashboardEffects } from './modules/dashboard/store/dashboard.effects';
 import { AppService } from './services/app.service';
 import { AppRoutingModule } from './app-routing.module';
@@ -28,9 +32,9 @@ import { HttpClientModule } from '@angular/common/http';
     StoreDevtoolsModule.instrument({
       maxAge: 15
     }),
-    EffectsModule.forRoot([AppEffects])
+    EffectsModule.forRoot([AppEffects, ProfileEffects, LanguageEffects])
   ],
-  providers: [AppStore, AppService],
+  providers: [AppStore, AppService, ProfileStore, LanguageStore],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
