@@ -1,4 +1,4 @@
-import { GameCardComponent } from './../../components/gameCard/game-card.component';
+import { GameCardComponent } from '../../components/gameCard/GameCard.component';
 import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { GamesEffects } from './store/games.effects';

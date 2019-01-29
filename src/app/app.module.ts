@@ -2,7 +2,6 @@ import { LanguageEffects } from './modules/language/store/language.effects';
 import { ProfileEffects } from './modules/profile/store/profile.effects';
 import { LanguageStore } from './modules/language/store/language.store';
 import { ProfileStore } from './modules/profile/store/profile.store';
-import { DashboardEffects } from './modules/dashboard/store/dashboard.effects';
 import { AppService } from './services/app.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppEffects } from './store/app.effects';
@@ -19,7 +18,6 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/app.reducer';
 import { AppStore } from './store/app.store';
 import { HttpClientModule } from '@angular/common/http';
-import { GameCardComponent } from './components/gameCard/game-card.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, BodyComponent],

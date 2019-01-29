@@ -1,3 +1,4 @@
+import { DashboardCardComponent } from '../../components/dashboardCard/DashboardCard.component';
 import { DashboardEffects } from './store/dashboard.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardService } from './services/dashboard.service';
@@ -17,7 +18,7 @@ import { DashboardStore } from './store/dashboard.store';
     HttpClientModule,
     EffectsModule.forFeature([DashboardEffects])
   ],
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, DashboardCardComponent],
   exports: [],
   providers: [DashboardStore, DashboardService],
   bootstrap: [DashboardComponent]

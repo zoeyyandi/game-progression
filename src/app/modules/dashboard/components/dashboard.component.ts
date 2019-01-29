@@ -11,6 +11,7 @@ import { IAppState } from 'src/app/types/app-state/app-state.interface';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent {
+  title = 'Your Dashboard';
   constructor(
     private store: Store<IAppState>,
     public dashboardStore: DashboardStore

@@ -5,7 +5,7 @@ import {
 } from './dashboard.actions';
 
 const initialDashboardState = {
-  timeRemaining: 0,
+  timeRemaining: '',
   numberOfUnfinishedGames: 0,
   numberOfFinishedGames: 0,
   getGamesError: {}

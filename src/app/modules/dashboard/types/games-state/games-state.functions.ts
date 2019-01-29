@@ -1,3 +1,5 @@
+import { ProfileStore as profileStore } from './../../../profile/store/profile.store';
+
 export const transformGames = gamesArray => {
   return gamesArray.reduce(
     (acc, curr) => {
@@ -21,3 +23,5 @@ export const transformGames = gamesArray => {
     }
   );
 };
+
+// averageNumberOfHoursPerDay

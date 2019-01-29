@@ -1,2 +1,4 @@
-<p>Dashboard</p>
-<p>{{ dashboardStore.getDashboardState() | async | json }}</p>
+<h3>{{ title }}</h3>
+<app-dashboard-card
+  [summary]="dashboardStore.getDashboardState() | async"
+></app-dashboard-card>

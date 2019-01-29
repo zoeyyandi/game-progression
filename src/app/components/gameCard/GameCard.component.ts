@@ -3,13 +3,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-game-card',
-  templateUrl: './game-card.component.html',
-  styleUrls: ['./game-card.component.scss']
+  templateUrl: './GameCard.component.html',
+  styleUrls: ['./gameCard.component.scss']
 })
 export class GameCardComponent {
   @Input() game: IGame;
 
-  constructor() {
-    console.log('rfkshkgznvkfsjvnsfnvfsv', this.game);
-  }
+  constructor() {}
 }

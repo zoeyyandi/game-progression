@@ -1,9 +1,8 @@
 export interface IDashboardState {
-  timeRemaining: number;
+  timeRemaining: string;
   numberOfUnfinishedGames: number;
   numberOfFinishedGames: number;
 }
-
 export interface IGame {
   id: number;
   dateCreated: string;
