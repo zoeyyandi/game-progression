@@ -19,6 +19,7 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './store/app.reducer';
 import { AppStore } from './store/app.store';
 import { HttpClientModule } from '@angular/common/http';
+import { GameCardComponent } from './components/gameCard/game-card.component';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, BodyComponent],

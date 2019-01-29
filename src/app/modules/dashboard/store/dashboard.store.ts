@@ -1,7 +1,6 @@
 import { IAppState } from 'src/app/types/app-state/app-state.interface';
 import { Injectable } from '@angular/core';
 import { Store, State, select } from '@ngrx/store';
-import { AppStore } from '../../../store/app.store';
 import { IDashboardState } from '../types/dashboard-state/dashboard-state.interface';
 import { Observable } from 'rxjs';
 

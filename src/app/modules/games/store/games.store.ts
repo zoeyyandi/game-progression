@@ -1,15 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
-
 import { IAppState } from '../../../types/app-state/app-state.interface';
-import { AppStore } from '../../../store/app.store';
+import { IGame } from '../../dashboard/types/dashboard-state/dashboard-state.interface';
 @Injectable()
 export class GamesStore {
-  constructor(private appStore: AppStore, private store: Store<IAppState>) {}
+  constructor(private store: Store<IAppState>) {}
 
-  // public getGamesState(): Observable<IGamesState> {
-  //   return this.appStore.getAppState().pipe(map(state => state.gamesState));
-  // }
+  public getGamesState(): Observable<Array<IGame | Error>> {
+    return this.store.pipe(select(state => state.gamesState));
+  }
 }

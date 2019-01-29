@@ -1,0 +1,9 @@
+<ul *ngFor="let g of game">
+  <li *ngFor="let eachGame of g">
+    <h1>{{ eachGame.name }}</h1>
+    <img src="{{ eachGame.image }}" />
+    <p>{{ eachGame.platformId }}</p>
+    <p>Est. % Completed:</p>
+    <p>Completion Date:</p>
+  </li>
+</ul>
