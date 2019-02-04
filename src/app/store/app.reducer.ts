@@ -7,13 +7,15 @@ import { profileReducer } from '../modules/profile/store/profile.reducer';
 import { languageReducer } from '../modules/language/store/language.reducer';
 import { gamesReducer } from '../modules/games/store/games.reducer';
 import { platformsReducer } from '../modules/platforms/store/platforms.reducer';
+import { yourProfileReducer } from '../modules/yourProfile/store/yourProfile.reducer';
 
 export const reducers: ActionReducerMap<IAppState> = {
   profileState: profileReducer,
   dashboardState: dashboardReducer,
   languageState: languageReducer,
   gamesState: gamesReducer,
-  platformsState: platformsReducer
+  platformsState: platformsReducer,
+  yourProfileState: yourProfileReducer
 };
 
 export function logger(reducer: ActionReducer<IAppState>): any {

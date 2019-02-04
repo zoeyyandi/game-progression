@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: './modules/games/games.module#GamesModule'
   },
   {
+    path: 'my-profile',
+    loadChildren: './modules/yourProfile/yourProfile.module#YourProfileModule'
+  },
+  {
     path: '**',
     redirectTo: 'dashboard',
     pathMatch: 'full'

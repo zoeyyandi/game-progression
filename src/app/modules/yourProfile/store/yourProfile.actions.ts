@@ -1,22 +1,27 @@
 import { IProfile } from './../../profile/types/profile-state.interface';
 import { Action } from '@ngrx/store';
 
-export enum ProfileActionTypes {
-  UpdateProfile = '[Profile] Update Profile',
-  UpdateProfileSuccess = '[Profile] Update Profile Success',
-  UpdateProfileFailure = '[Profile] Update Profile Failure'
+export enum YourProfileActionTypes {
+  UpdateProfile = '[YourProfile] Update Profile',
+  UpdateProfileSuccess = '[YourProfile] Update Profile Success',
+  UpdateProfileFailure = '[YourProfile] Update Profile Failure'
 }
 
 export class UpdateProfile implements Action {
-  readonly type = ProfileActionTypes.UpdateProfile;
+  readonly type = YourProfileActionTypes.UpdateProfile;
 }
 
 export class UpdateProfileSuccess implements Action {
-  readonly type = ProfileActionTypes.UpdateProfileSuccess;
+  readonly type = YourProfileActionTypes.UpdateProfileSuccess;
   constructor(public payload: IProfile) {}
 }
 
 export class UpdateProfileFailure implements Action {
-  readonly type = ProfileActionTypes.UpdateProfileFailure;
+  readonly type = YourProfileActionTypes.UpdateProfileFailure;
   constructor(public payload: Error) {}
 }
+
+export type YourProfileActionsUnion =
+  | UpdateProfile
+  | UpdateProfileSuccess
+  | UpdateProfileFailure;

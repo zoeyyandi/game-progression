@@ -5,7 +5,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class ProfileService {
+export class YourProfileService {
   private baseUrl = 'http://localhost:3000/';
   constructor(private http: HttpClient) {}
 
