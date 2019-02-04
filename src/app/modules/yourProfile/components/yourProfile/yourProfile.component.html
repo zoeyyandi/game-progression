@@ -1,0 +1,11 @@
+<h3>{{ title }}</h3>
+<a routerLink="/my-profile/edit" routerLinkActive="active">EDIT</a>
+<p>Name:</p>
+<p>
+  {{ (profileStore.getProfileState() | async).firstName }}
+  {{ (profileStore.getProfileState() | async).lastName }}
+</p>
+<p>Avatar Image Url:</p>
+<p>{{ (profileStore.getProfileState() | async).image }}</p>
+<p>Average Number of Hours to Game Per Day:</p>
+<p>{{ (profileStore.getProfileState() | async).averageNumberOfHoursPerDay }}</p>

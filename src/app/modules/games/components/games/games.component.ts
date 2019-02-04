@@ -5,8 +5,6 @@ import { IAppState } from 'src/app/types/app-state/app-state.interface';
 import { Component, OnInit, OnChanges } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { IGame } from '../../types/games/games.interface';
-import { mergeAll, concatAll, mergeMap, toArray } from 'rxjs/operators';
-import { from } from 'rxjs';
 
 @Component({
   selector: 'app-games',

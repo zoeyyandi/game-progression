@@ -1,4 +1,4 @@
-import { YourProfileComponent } from './components/yourProfile.component';
+import { YourProfileComponent } from './components/yourProfile/yourProfile.component';
 import { YourProfileEffects } from './store/yourProfile.effects';
 import { YourProfileRoutingModule } from './yourProfile-routing.module';
 import { HttpClientModule } from '@angular/common/http';
@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { EffectsModule } from '@ngrx/effects';
 import { YourProfileService } from './services/yourProfile.service';
 import { YourProfileStore } from './store/yourProfile.store';
+import { EditProfileComponent } from './components/editProfile/editProfile.component';
 
 @NgModule({
   imports: [
@@ -17,9 +18,9 @@ import { YourProfileStore } from './store/yourProfile.store';
     HttpClientModule,
     EffectsModule.forFeature([YourProfileEffects])
   ],
-  declarations: [YourProfileComponent],
+  declarations: [YourProfileComponent, EditProfileComponent],
   exports: [],
   providers: [YourProfileStore, YourProfileService],
-  bootstrap: [YourProfileComponent]
+  bootstrap: [YourProfileComponent, EditProfileComponent]
 })
 export class YourProfileModule {}

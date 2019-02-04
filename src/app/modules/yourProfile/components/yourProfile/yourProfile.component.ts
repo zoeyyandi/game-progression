@@ -2,6 +2,7 @@ import { Component, OnInit, OnChanges } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { IAppState } from 'src/app/types/app-state/app-state.interface';
+import { ProfileStore } from '../../../profile/store/profile.store';
 
 @Component({
   selector: 'app-your-profile',
@@ -9,6 +10,9 @@ import { IAppState } from 'src/app/types/app-state/app-state.interface';
   styleUrls: ['./yourProfile.component.scss']
 })
 export class YourProfileComponent {
-  title = 'Your Profile';
-  constructor(private store: Store<IAppState>) {}
+  title = 'My Profile';
+  constructor(
+    private store: Store<IAppState>,
+    public profileStore: ProfileStore
+  ) {}
 }
