@@ -1,0 +1,24 @@
+img {
+  height: auto;
+  width: 100px;
+}
+
+li {
+  list-style-type: none;
+  display: inline-block;
+}
+
+.game-info-container {
+  margin-right: 30px;
+  flex-grow: 1;
+}
+
+img {
+  display: flex;
+  flex-grow: 1;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}

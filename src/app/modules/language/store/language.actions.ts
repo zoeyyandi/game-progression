@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { ILanguage } from '../types/language-state.interface';
+import { ILanguage } from './../types/language/language.interface';
 
 export enum LanguageActionTypes {
   GetLanguage = '[Language] Get Language',

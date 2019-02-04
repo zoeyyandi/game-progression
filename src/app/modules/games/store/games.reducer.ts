@@ -1,19 +1,19 @@
+import { IGameState } from 'src/app/modules/games/types/games-state/games-state.interface';
 import { GamesActionsUnion, GamesActionTypes } from './games.actions';
-import { IGame } from '../../dashboard/types/dashboard-state/dashboard-state.interface';
 
-const initialGamesState = [];
+const initialGamesState = {};
 
 export function gamesReducer(
-  state: Array<IGame | Error> = initialGamesState,
+  state: IGameState = initialGamesState,
   action: GamesActionsUnion
-): Array<IGame | Error> {
+): IGameState {
   switch (action.type) {
     case GamesActionTypes.GetGames:
-      return [...state];
+      return { ...state };
     case GamesActionTypes.GetGamesSuccess:
-      return [...state, action.payload];
+      return { ...state, games: [action.payload] };
     case GamesActionTypes.GetGamesFailure:
-      return [...state, action.payload];
+      return { ...state, error: action.payload };
     default:
       return state;
   }

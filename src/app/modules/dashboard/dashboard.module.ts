@@ -1,3 +1,5 @@
+import { PlatformsService } from './../platforms/services/platforms.service';
+import { PlatformsEffects } from './../platforms/store/platforms.effects';
 import { DashboardCardComponent } from '../../components/dashboardCard/DashboardCard.component';
 import { DashboardEffects } from './store/dashboard.effects';
 import { HttpClientModule } from '@angular/common/http';

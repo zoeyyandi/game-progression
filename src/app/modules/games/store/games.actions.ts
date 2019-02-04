@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { IGame } from '../types/games-state/games-state.interface';
+import { IGame } from '../types/games/games.interface';
 
 export enum GamesActionTypes {
   GetGames = '[Games] Get Games',

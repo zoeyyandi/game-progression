@@ -1,4 +1,4 @@
-import { ILanguage } from './../../modules/language/types/language-state.interface';
+import { ILanguage } from '../../modules/language/types/language/language.interface';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

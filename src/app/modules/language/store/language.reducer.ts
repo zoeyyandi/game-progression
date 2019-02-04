@@ -1,19 +1,19 @@
-import { ILanguage } from './../types/language-state.interface';
+import { ILanguageState } from '../types/langage-state/language-state.interface';
 import { LanguageActionsUnion, LanguageActionTypes } from './language.actions';
 
-const initialLanguagesState = [];
+const initialLanguagesState = {};
 
 export function languageReducer(
-  state: Array<ILanguage | Error> = initialLanguagesState,
+  state: ILanguageState = initialLanguagesState,
   action: LanguageActionsUnion
-): Array<ILanguage | Error> {
+): ILanguageState {
   switch (action.type) {
     case LanguageActionTypes.GetLanguage:
-      return [...state];
+      return { ...state };
     case LanguageActionTypes.GetLanguagesSuccess:
-      return [...state, action.payload];
+      return { ...state, languages: [action.payload] };
     case LanguageActionTypes.GetLanguagesFailure:
-      return [...state, action.payload];
+      return { ...state, error: action.payload };
     default:
       return state;
   }

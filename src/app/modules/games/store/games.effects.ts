@@ -9,7 +9,7 @@ import {
   GetGamesFailure
 } from './games.actions';
 import { switchMap, map, catchError } from 'rxjs/operators';
-import { IGame } from '../types/games-state/games-state.interface';
+import { IGame } from '../types/games/games.interface';
 
 @Injectable({ providedIn: 'root' })
 export class GamesEffects {

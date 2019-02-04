@@ -1,5 +1,26 @@
 img {
-  height: 100px;
+  height: 80px;
   width: auto;
   border-radius: 50%;
+}
+
+div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5px 30px;
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: #1e2e3b;
+  color: #d6dbdf;
+}
+
+.profile-container {
+  display: flex;
+  align-content: center;
+}
+
+h4 {
+  margin: 0 0 0 30px;
+  align-self: center;
 }

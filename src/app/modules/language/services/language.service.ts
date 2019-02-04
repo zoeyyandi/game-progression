@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { ILanguage } from './../types/language-state.interface';
+import { ILanguage } from '../types/language/language.interface';
 
 @Injectable({
   providedIn: 'root'

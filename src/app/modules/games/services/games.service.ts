@@ -1,4 +1,4 @@
-import { IGame } from './../types/games-state/games-state.interface';
+import { IGame } from './../types/games/games.interface';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 

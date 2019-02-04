@@ -1,0 +1,11 @@
+<h3>{{ title }}</h3>
+<div *ngFor="let game of (gamesStore.getGames() | async)">
+  <div *ngFor="let platforms of (gamesStore.getPlatforms() | async)">
+    <app-game-card
+      *ngFor="let eachGame of game"
+      [game]="eachGame"
+      [platforms]="platforms"
+    >
+    </app-game-card>
+  </div>
+</div>

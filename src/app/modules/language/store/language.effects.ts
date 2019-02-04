@@ -8,8 +8,8 @@ import {
   GetLanguagesSuccess,
   GetLanguagesFailure
 } from './language.actions';
-import { switchMap, map, catchError } from 'rxjs/operators';
-import { ILanguage } from '../types/language-state.interface';
+import { switchMap, map, catchError, mergeAll, tap } from 'rxjs/operators';
+import { ILanguage } from '../types/language/language.interface';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageEffects {

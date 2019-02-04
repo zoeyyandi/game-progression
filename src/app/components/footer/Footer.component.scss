@@ -1,0 +1,15 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 10px;
+  font-family: sans-serif;
+  font-weight: 100;
+  background-color: #1e2e3b;
+  color: #d6dbdf;
+}
+
+li {
+  list-style: none;
+  padding: 0 10px;
+}
