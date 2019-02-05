@@ -1,7 +1,13 @@
 <div class="header">
   <h1>{{ title }}</h1>
-  <div class="profile-container">
-    <img src="../../../assets/{{ profile.image }}" />
-    <h4>{{ profile.firstName }} {{ profile.lastName }}</h4>
-  </div>
+  <button routerLink="/my-profile" routerLinkActive="active">
+    <div class="profile-container">
+      <img src="../../../assets/{{ profile.image }}" />
+      <p>{{ profile.firstName }} {{ profile.lastName }}</p>
+    </div>
+  </button>
+</div>
+<div class="sub-header">
+  <button routerLink="/dashboard" routerLinkActive="active">Dashboard</button>
+  <button routerLink="/games" routerLinkActive="active">Games</button>
 </div>
