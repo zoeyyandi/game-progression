@@ -12,7 +12,7 @@ import { IGame } from '../../types/games/games.interface';
   styleUrls: ['./games.component.scss']
 })
 export class GamesComponent {
-  title = 'Games';
+  title = 'Games Owned';
   games: IGame[];
   constructor(private store: Store<IAppState>, public gamesStore: GamesStore) {
     this.store.dispatch(new GetGames());

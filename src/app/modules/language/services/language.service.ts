@@ -10,6 +10,6 @@ export class LanguageService {
   constructor(private http: HttpClient) {}
 
   getLanguages() {
-    return this.http.get<ILanguage>(this.baseUrl + 'languages');
+    return this.http.get<ILanguage[]>(this.baseUrl + 'languages');
   }
 }

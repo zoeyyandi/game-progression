@@ -1,11 +1,11 @@
-<h3>{{ title }}</h3>
+<div class="title-bar">
+  <h3>{{ title }}</h3>
+  <button routerLink="/my-profile/edit" routerLinkActive="active">
+    ADD GAME
+  </button>
+</div>
 <div *ngFor="let game of (gamesStore.getGames() | async)">
   <div *ngFor="let platforms of (gamesStore.getPlatforms() | async)">
-    <app-game-card
-      *ngFor="let eachGame of game"
-      [game]="eachGame"
-      [platforms]="platforms"
-    >
-    </app-game-card>
+    <app-game-card [game]="game" [platforms]="platforms"> </app-game-card>
   </div>
 </div>

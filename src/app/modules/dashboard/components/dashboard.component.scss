@@ -1,3 +1,10 @@
-h3 {
+p {
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #30495f;
+  padding: 10px 20px;
+  margin: 20px;
+  color: #d6dbdf;
 }

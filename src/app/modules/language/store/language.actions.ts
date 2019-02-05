@@ -13,12 +13,12 @@ export class GetLanguage implements Action {
 
 export class GetLanguagesSuccess implements Action {
   readonly type = LanguageActionTypes.GetLanguagesSuccess;
-  constructor(public payload: ILanguage) {}
+  constructor(public payload: ILanguage[]) {}
 }
 
 export class GetLanguagesFailure implements Action {
   readonly type = LanguageActionTypes.GetLanguagesFailure;
-  constructor(public payload: Error) {}
+  constructor(public payload: Boolean) {}
 }
 
 export type LanguageActionsUnion =

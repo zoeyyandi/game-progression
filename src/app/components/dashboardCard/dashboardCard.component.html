@@ -1,3 +1,12 @@
-<h2>Time Remaining: {{ summary.timeRemaining }}</h2>
-<h3>Number of Unfinished Games: {{ summary.numberOfUnfinishedGames }}</h3>
-<h3>Number of Finished Games: {{ summary.numberOfFinishedGames }}</h3>
+<div class="stats-container">
+  <p>Time Remaining: {{ summary.timeRemaining }}</p>
+  <p>Number of Unfinished Games: {{ summary.numberOfUnfinishedGames }}</p>
+  <svg viewBox="0, 0, 100, 4" class="bar-1">
+    <rect [attr.width]="progressBar1" height="4" fill="#b43f3f"></rect>
+  </svg>
+  <p>Number of Finished Games: {{ summary.numberOfFinishedGames }}</p>
+  <svg viewBox="0, 0, 100, 4">
+    <!-- <rect [attr.width]="2" height="4" fill="#76b43f"></rect> -->
+    <rect [attr.width]="progressBar2" height="4" fill="#76b43f"></rect>
+  </svg>
+</div>

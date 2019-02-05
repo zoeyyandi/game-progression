@@ -10,6 +10,6 @@ export class GamesService {
   constructor(private http: HttpClient) {}
 
   getGames() {
-    return this.http.get<IGame>(this.baseUrl + 'games');
+    return this.http.get<IGame[]>(this.baseUrl + 'games');
   }
 }

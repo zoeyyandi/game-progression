@@ -13,12 +13,12 @@ export class GetGames implements Action {
 
 export class GetGamesSuccess implements Action {
   readonly type = GamesActionTypes.GetGamesSuccess;
-  constructor(public payload: IGame) {}
+  constructor(public payload: IGame[]) {}
 }
 
 export class GetGamesFailure implements Action {
   readonly type = GamesActionTypes.GetGamesFailure;
-  constructor(public payload: Error) {}
+  constructor(public payload: Boolean) {}
 }
 
 export type GamesActionsUnion = GetGames | GetGamesSuccess | GetGamesFailure;

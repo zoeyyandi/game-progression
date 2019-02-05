@@ -20,8 +20,8 @@ export class GamesEffects {
     switchMap(() =>
       this.gamesService
         .getGames()
-        .pipe(map((games: IGame) => new GetGamesSuccess(games)))
+        .pipe(map((games: IGame[]) => new GetGamesSuccess(games)))
     ),
-    catchError(error => observableOf(new GetGamesFailure(error)))
+    catchError(error => observableOf(new GetGamesFailure(true)))
   );
 }

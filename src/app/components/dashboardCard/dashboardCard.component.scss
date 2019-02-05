@@ -1,4 +1,21 @@
-h2,
-h3 {
+p {
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-container {
+  background-color: #30495f;
+  padding: 10px 20px;
+  margin: 20px;
+  color: #d6dbdf;
+}
+
+.bar {
+  height: 100%;
+  color: #b43f3f;
+}
+
+.bar-container {
+  background-color: #c99898;
+  width: 100%;
+  border: 5px solid blue;
 }

@@ -11,7 +11,7 @@ export function gamesReducer(
     case GamesActionTypes.GetGames:
       return { ...state };
     case GamesActionTypes.GetGamesSuccess:
-      return { ...state, games: [action.payload] };
+      return { ...state, games: action.payload };
     case GamesActionTypes.GetGamesFailure:
       return { ...state, error: action.payload };
     default:

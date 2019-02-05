@@ -23,7 +23,9 @@ export class LanguageEffects {
     switchMap(() =>
       this.languageService
         .getLanguages()
-        .pipe(map((language: ILanguage) => new GetLanguagesSuccess(language)))
+        .pipe(
+          map((languages: ILanguage[]) => new GetLanguagesSuccess(languages))
+        )
     ),
     catchError(error => observableOf(new GetLanguagesFailure(error)))
   );

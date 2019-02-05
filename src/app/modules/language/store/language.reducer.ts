@@ -11,7 +11,7 @@ export function languageReducer(
     case LanguageActionTypes.GetLanguage:
       return { ...state };
     case LanguageActionTypes.GetLanguagesSuccess:
-      return { ...state, languages: [action.payload] };
+      return { ...state, languages: action.payload };
     case LanguageActionTypes.GetLanguagesFailure:
       return { ...state, error: action.payload };
     default:

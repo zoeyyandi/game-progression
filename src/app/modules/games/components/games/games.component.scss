@@ -1,3 +1,18 @@
 h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.title-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #30495f;
+  margin: 20px;
+  color: #d6dbdf;
+  padding-left: 10px;
+}
+
+button {
+  border: none;
+  background-color: #9dafbd;
+}

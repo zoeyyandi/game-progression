@@ -7,13 +7,11 @@ import { YourProfileComponent } from './components/yourProfile/yourProfile.compo
 const routes: Routes = [
   {
     path: '',
-    component: YourProfileComponent,
-    children: [
-      {
-        path: 'edit',
-        component: EditProfileComponent
-      }
-    ]
+    component: YourProfileComponent
+  },
+  {
+    path: 'edit',
+    component: EditProfileComponent
   }
 ];
 
