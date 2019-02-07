@@ -14,7 +14,7 @@ export function platformsReducer(
     case PlatformsActionTypes.GetPlatforms:
       return { ...state };
     case PlatformsActionTypes.GetPlatformsSuccess:
-      return { ...state, platforms: [action.payload] };
+      return { ...state, platforms: action.payload };
     case PlatformsActionTypes.GetPlatformsFailure:
       return { ...state, error: action.payload };
     default:

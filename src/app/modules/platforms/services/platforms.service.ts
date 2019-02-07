@@ -10,6 +10,6 @@ export class PlatformsService {
   constructor(private http: HttpClient) {}
 
   getPlatforms() {
-    return this.http.get<IPlatform>(this.baseUrl + 'platforms');
+    return this.http.get<IPlatform[]>(this.baseUrl + 'platforms');
   }
 }

@@ -23,8 +23,10 @@ export class PlatformsEffects {
     switchMap(() =>
       this.platformService
         .getPlatforms()
-        .pipe(map((platforms: IPlatform) => new GetPlatformsSuccess(platforms)))
+        .pipe(
+          map((platforms: IPlatform[]) => new GetPlatformsSuccess(platforms))
+        )
     ),
-    catchError(error => observableOf(new GetPlatformsFailure(error)))
+    catchError(error => observableOf(new GetPlatformsFailure(true)))
   );
 }

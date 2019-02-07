@@ -1,0 +1,24 @@
+<p>Add Game</p>
+<form [formGroup]="newGameForm" (ngSubmit)="onSubmit()">
+  <label>
+    Name:
+    <input type="text" formControlName="Name" />
+  </label>
+  <label>
+    Image URL:
+    <input type="text" formControlName="ImageURL" />
+  </label>
+  <label>
+    Platform:
+    <input type="text" formControlName="Platform" />
+  </label>
+  <label>
+    Number of Hours to Complete:
+    <input type="text" formControlName="NumberOfHoursToComplete" />
+  </label>
+  <label>
+    Priority:
+    <input type="text" formControlName="Priority" />
+  </label>
+  <button type="submit" [disabled]="!newGameForm.valid">Submit</button>
+</form>

@@ -3,10 +3,21 @@
   <p>Number of Unfinished Games: {{ summary.numberOfUnfinishedGames }}</p>
   <svg viewBox="0, 0, 100, 4" class="bar-1">
     <rect [attr.width]="progressBar1" height="4" fill="#b43f3f"></rect>
+    <rect
+      [attr.width]="progressBar2"
+      [attr.x]="progressBar1"
+      height="4"
+      fill="#c99898"
+    ></rect>
   </svg>
   <p>Number of Finished Games: {{ summary.numberOfFinishedGames }}</p>
   <svg viewBox="0, 0, 100, 4">
-    <!-- <rect [attr.width]="2" height="4" fill="#76b43f"></rect> -->
     <rect [attr.width]="progressBar2" height="4" fill="#76b43f"></rect>
+    <rect
+      [attr.width]="progressBar1"
+      [attr.x]="progressBar2"
+      height="4"
+      fill="#a8ce87"
+    ></rect>
   </svg>
 </div>

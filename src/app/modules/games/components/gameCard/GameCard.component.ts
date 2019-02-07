@@ -11,18 +11,15 @@ export class GameCardComponent implements OnChanges {
   @Input() game: IGame;
   @Input() platforms: IPlatform[];
   @Input() random: string;
-  platform: IPlatform;
+  platform: string;
   estimatedPercentageCompleted: string;
 
-  ngOnChanges(changes) {
-    if (
-      changes.game.previousValue &&
-      changes.game.previousValue.platformId !==
-        changes.game.currentValue.platformId
-    ) {
+  ngOnChanges() {
+    if (this.platforms) {
+      console.log(this.platforms);
       this.platform = this.platforms.find(
         platform => platform.id === this.game.platformId
-      );
+      ).name;
     }
     this.estimatedPercentageCompleted = (
       (this.game.numberOfHoursPlayed / this.game.numberOfHoursToComplete) *

@@ -13,12 +13,12 @@ export class GetPlatforms implements Action {
 
 export class GetPlatformsSuccess implements Action {
   readonly type = PlatformsActionTypes.GetPlatformsSuccess;
-  constructor(public payload: IPlatform) {}
+  constructor(public payload: IPlatform[]) {}
 }
 
 export class GetPlatformsFailure implements Action {
   readonly type = PlatformsActionTypes.GetPlatformsFailure;
-  constructor(public payload: Error) {}
+  constructor(public payload: Boolean) {}
 }
 
 export type PlatformsActionsUnion =
