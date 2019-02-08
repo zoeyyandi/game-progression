@@ -1,5 +1,11 @@
-<h3>{{ game.name }}</h3>
-<p>Est. % Completed: {{ estimatedPercentageCompleted }}%</p>
-<p>Completion Date:</p>
-<p>{{ platform }}</p>
-<img src="{{ game.image }}" />
+<div class="game-card">
+  <div>
+    <h3>{{ game.name }}</h3>
+    <p>{{ platform }}</p>
+    <p>Est. % Completed: {{ estimatedPercentageCompleted }}%</p>
+    <p>Completion Date:</p>
+  </div>
+  <div class="image-container">
+    <img src="{{ game.image }}" />
+  </div>
+</div>

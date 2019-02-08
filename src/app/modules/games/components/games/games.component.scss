@@ -16,3 +16,11 @@ button {
   border: none;
   background-color: #9dafbd;
 }
+
+.game-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  margin: 15px;
+}

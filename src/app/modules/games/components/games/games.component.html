@@ -4,8 +4,8 @@
     ADD GAME
   </button>
 </div>
-<div *ngFor="let game of (gamesStore.getGames() | async)">
-  <div>
+<div class="game-card-container">
+  <div *ngFor="let game of (gamesStore.getGames() | async)">
     <app-game-card
       [game]="game"
       [platforms]="gamesStore.getPlatforms() | async"

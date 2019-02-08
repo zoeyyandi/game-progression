@@ -16,7 +16,6 @@ export class GameCardComponent implements OnChanges {
 
   ngOnChanges() {
     if (this.platforms) {
-      console.log(this.platforms);
       this.platform = this.platforms.find(
         platform => platform.id === this.game.platformId
       ).name;
