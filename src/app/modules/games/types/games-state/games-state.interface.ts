@@ -1,6 +1,8 @@
 import { IGame } from '../games/games.interface';
+import { EntityState } from '@ngrx/entity';
 
-export interface IGameState {
-  games?: Array<IGame>;
-  error?: Boolean;
+export interface IGameState extends EntityState<IGame> {
+  selectedGameId: number | null;
+  error: Boolean;
+  loading: Boolean;
 }

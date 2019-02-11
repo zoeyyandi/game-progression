@@ -10,8 +10,8 @@ import { map, filter, mergeAll } from 'rxjs/operators';
 export class GamesStore {
   constructor(private store: Store<IAppState>) {}
 
-  public getGames(): Observable<Array<IGame>> {
-    return this.store.pipe(select(state => state.gamesState.games));
+  public getGames(): Observable<any> {
+    return this.store.pipe(select(state => state.gamesState));
   }
   public getPlatforms(): Observable<Array<IPlatform>> {
     return this.store.pipe(select(state => state.platformsState.platforms));
