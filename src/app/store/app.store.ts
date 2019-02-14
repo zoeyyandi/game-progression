@@ -1,3 +1,4 @@
+import { ILanguageState } from './../modules/language/types/langage-state/language-state.interface';
 import { ILanguage } from '../modules/language/types/language/language.interface';
 import { IProfile } from './../modules/profile/types/profile-state.interface';
 import { Injectable } from '@angular/core';
@@ -13,7 +14,7 @@ export class AppStore {
   public getprofileState(): Observable<IProfile> {
     return this.store.pipe(select(state => state.profileState));
   }
-  public getLanguageState(): Observable<Array<ILanguage>> {
-    return this.store.pipe(select(state => state.languageState.languages));
+  public getLanguageState(): Observable<ILanguageState> {
+    return this.store.pipe(select(state => state.languageState));
   }
 }

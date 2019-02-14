@@ -1,10 +1,18 @@
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 import {
   PlatformsActionTypes,
   PlatformsActionsUnion
 } from './platforms.actions';
 import { IPlatformState } from '../types/platforms-state/platforms-state.interface';
+import * as fromAdapter from './platforms.adapter';
 
-const initialPlatformsState = {};
+export const initialPlatformsState: IPlatformState = fromAdapter.adapter.getInitialState(
+  {
+    selectedPlatformId: null,
+    error: false,
+    loading: false
+  }
+);
 
 export function platformsReducer(
   state: IPlatformState = initialPlatformsState,
@@ -14,10 +22,30 @@ export function platformsReducer(
     case PlatformsActionTypes.GetPlatforms:
       return { ...state };
     case PlatformsActionTypes.GetPlatformsSuccess:
-      return { ...state, platforms: action.payload };
+      return fromAdapter.adapter.addAll(action.payload, {
+        ...state,
+        loading: false
+      });
     case PlatformsActionTypes.GetPlatformsFailure:
       return { ...state, error: action.payload };
     default:
       return state;
   }
 }
+
+export const getPlatformState = createFeatureSelector<IPlatformState>(
+  'platformsState'
+);
+
+export const selectPlatformIds = createSelector(
+  getPlatformState,
+  (state: IPlatformState) => state.ids
+);
+export const selectPlatformEntities = createSelector(
+  getPlatformState,
+  (state: IPlatformState) => state.entities
+);
+export const selectAllPlatforms = createSelector(
+  getPlatformState,
+  fromAdapter.selectAll
+);

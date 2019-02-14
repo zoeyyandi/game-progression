@@ -1,7 +1,9 @@
 <div class="game-card">
   <div>
     <h3>{{ game.name }}</h3>
-    <p>{{ platform }}</p>
+    <p *ngIf="platforms[game.platformId]">
+      {{ platforms[game.platformId].name }}
+    </p>
     <p>Est. % Completed: {{ estimatedPercentageCompleted }}%</p>
     <p>Completion Date:</p>
   </div>

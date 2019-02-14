@@ -6,10 +6,7 @@
 </div>
 <div class="game-card-container">
   <div *ngFor="let game of (games | async)">
-    <app-game-card
-      [game]="game"
-      [platforms]="gamesStore.getPlatforms() | async"
-    >
+    <app-game-card [game]="game" [platforms]="platforms | async">
     </app-game-card>
   </div>
 </div>

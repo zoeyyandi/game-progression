@@ -7,5 +7,6 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent {
-  @Input() language: ILanguage;
+  @Input() languages: {};
+  @Input() languagesIds: Array<number>;
 }

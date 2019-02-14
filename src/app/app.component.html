@@ -3,4 +3,7 @@
   [profile]="profileStore.getProfileState() | async"
 ></app-header>
 <app-body> <router-outlet></router-outlet> </app-body>
-<app-footer [language]="appStore.getLanguageState() | async"></app-footer>
+<app-footer
+  [languages]="languages | async"
+  [languagesIds]="languagesIds | async"
+></app-footer>
